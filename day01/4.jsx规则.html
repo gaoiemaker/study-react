@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jsx的语法规则</title>
 </head>
 
 <body>
@@ -17,12 +17,17 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
+
+        const myId = 'gs'
+        const content = '你好世界'
         // 创建虚拟dom
-        const VDOM = <h1>Hello,world</h1> // 虚拟dom
+        const VDOM = <h1 id={myId}>{content}</h1> // 虚拟dom
         // 渲染虚拟dom到页面
 
-        ReactDOM.render(VDOM,document.getElementById('text'))
+        ReactDOM.render(VDOM, document.getElementById('text'))
+
     </script>
+
 </body>
 
 </html>
