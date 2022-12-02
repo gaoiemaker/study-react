@@ -11,7 +11,7 @@ react 的优点：
 
 2.在react native中可以使用react语法进行移动端开发
 
-3.是用来虚拟dom 和 优秀的diff算法 尽量减少与真实动漫的交互
+3.是用来虚拟dom 和 优秀的diff算法 尽量减少与真实dom的交互
 
 ### 创建虚拟dom两种方式
 
@@ -44,4 +44,39 @@ react 的优点：
         （1）若是小写字母开头 则将去html中找响应同名标签 若html中午改标签报错
         （2） 若是大写字母开头 react就去渲染对应的组件 
 
+## js表达式
 
+    js语句：不产生值的代码语句  if for switch 
+    js表达式：一个表达式 可以产生一个值 可以放在任意的一个需要值的地方
+
+
+## 模块化和组件化
+
+    模块 ： 把js逻辑拆分
+
+    组件化： js css html 都拆出来 拆成一个完整的小部分
+
+## 严格模式 （use stract）
+ 
+    babel打包后 代码就开启了严格模式（函数中的this不会再默认的指向window）
+
+## react创建函数式组件  
+
+    function MyComponent(){
+        return 结构
+    }
+    1.react 解析组件标签 找到MyComponent组件
+    2.发现组件是使用函数定义的 随后调用该函数
+
+## react创建类组件
+    class MyComponent {
+        render(){
+            return 结构
+        }
+    }
+
+    1.react 解析组件标签 找到MyComponent组件
+    2，发现组件是使用类定义的 随后new出来该类的实例 
+        并且通过该实例调用原型上的render方法
+    3.将render返回的虚拟dom展示到页面中
+    
