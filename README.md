@@ -79,4 +79,12 @@ react 的优点：
     2，发现组件是使用类定义的 随后new出来该类的实例 
         并且通过该实例调用原型上的render方法
     3.将render返回的虚拟dom展示到页面中
+
+## 组件有了状态就是复杂组件
+
+    使用constructor接收props
+
+## react中state中的数据不能够直接更改
+
+    需要借助api进行更改
     
