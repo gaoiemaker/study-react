@@ -87,4 +87,14 @@ react 的优点：
 ## react中state中的数据不能够直接更改
 
     需要借助api进行更改
-    
+
+## 组件的标签属性进行限制
+    使用依赖包prop-types
+
+    使用的是 PropTypes
+
+
+    默认值使用
+    实例.defaultProps = {
+        
+    }
