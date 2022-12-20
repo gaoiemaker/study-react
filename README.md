@@ -98,3 +98,6 @@ react 的优点：
     实例.defaultProps = {
         
     }
+
+## 函数使用props 
+    函数可以接收props 可以直接从函数中进行接收

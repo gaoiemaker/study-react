@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 准备一个容器 -->
+    <div id="text1"></div>
+    <div id="text2"></div>
+    <div id="text3"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        class Person extends React.Component {
+            render(){
+                return (
+                    <div>
+                        <input type="text" ref='input1' placeholder='点击按钮提示数据' />
+                        <button onClick = {this.showData}>点我提示左侧的数据</button>
+                        <input type="text" ref='input2' onBlur = {this.showData2} placeholder='失去焦点提示数据' />    
+                    </div>
+                )
+            }
+            showData = ()=>{
+                alert(this.refs.input1.value)
+            }
+            showData2 = ()=>{
+                alert(this.refs.input2.value)
+            }
+        }
+
+        ReactDOM.render(<Person />, document.querySelector('#text1'))
+    </script>
+</body>
+
+</html>
