@@ -12,29 +12,26 @@
     <!-- 准备一个容器 -->
     <div id="text1"></div>
     <div id="text2"></div>
-    <div id="text3"></div>
-
+    <div id="text3"></div>  
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
-        // const state = {}
         class MyComponent extends React.Component {
-            render() {
-                const { name, age, sex } = this.props
+            // render函数 用来生成html结构
+            render(){
+                const {name,age,sex}  = this.props;
                 return (
                     <ul>
-                        <li>姓名：{name}</li>
-                        <li>年龄：{age}</li>
-                        <li>性别：{sex}</li>
+                        <li>{name}</li>
+                        <li>{age}</li>
+                        <li>{sex}</li>    
                     </ul>
                 )
             }
-
         }
-        ReactDOM.render(<MyComponent name='高尚' age='18' sex='男' />, document.getElementById('text1'))
-        // ReactDOM.render(<MyComponent />, document.getElementById('text2'))
-        // ReactDOM.render(<MyComponent />, document.getElementById('text3'))0
+
+        ReactDOM.render(<MyComponent name='高尚' age={18} sex='男' />,document.querySelector('#text1'))
     </script>
 </body>
 
