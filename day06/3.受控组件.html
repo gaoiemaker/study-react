@@ -20,25 +20,25 @@
         class Login extends React.Component {
             // 初始化状态
             state = {
-                username:'',
-                password:''
+                username: '',
+                password: ''
             }
             handleSubmit = (event) => {
                 event.preventDefault();
                 const { username, password } = this;
                 alert(`您提交的用户名是${username.value},密码是${password.value}`)
             }
-            saveUsername = (event)=>{
-                this.setState({username:event.target.value})
+            saveUserInfo = (dataName) => {
+                return (event) => {
+                    this.setState({ [dataName]: event.target.value })
+                }
             }
-            savePassword = ()=>{
-                this.setState({password:event.target.value})
-            }
+
             render() {
                 return (
                     <form action="" onSubmit={this.handleSubmit}>
-                        用户名：<input type="text" onChange = {this.saveUsername} ref={c => this.username = c} name='username' />
-                        密码：<input type="password" onChange = {this.savePassword} ref={c => this.password = c} name='password' />
+                        用户名：<input type="text" onChange={this.saveUserInfo('username')} ref={c => this.username = c} name='username' />
+                        密码：<input type="password" onChange={this.saveUserInfo('password')} ref={c => this.password = c} name='password' />
                         <button>登录</button>
                     </form>
                 )
