@@ -15,26 +15,28 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
 
-        const data  = [
+        const data = [
             'angular',
             'react',
             'vue'
         ]
         const VDOM = (
-            < div >
+            <div>
                 <h3>前端框架</h3>
                 <ul>
                     {
-                        data.map((item,index)=>{
-                            return <li key={index}>{item}</li> 
+                        data.map((item, index) => {
+                            return <li key={index}>{item}</li>
                         })
                     }
                 </ul>
-            </div >
+            </div>
         )
 
-        ReactDOM.render(VDOM,document.querySelector('#text'))
-
+        ReactDOM.render(VDOM, document.querySelector('#text'))
+        console.log(data.map((item, index) => {
+            return <li key={index}>{item}</li>
+        }))
 
     </script>
 </body>

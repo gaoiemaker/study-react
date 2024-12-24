@@ -25,15 +25,31 @@
             }
             render() {
                 return (
-                    <form action="" onSubmit={this.handleSubmit}>
-                        用户名：<input type="text" ref={c => this.username = c} name='username' />
+                    <form action="" onSubmit={this.handleSubmit} >
+                        用户名：<input type="text" ref={(a) => { this.username = a }} name='username' />
                         密码：<input type="password" ref={c => this.password = c} name='password' />
-                        <button>登录</button>
+                        <button >登录</button>
                     </form>
                 )
             }
         }
+        class Imgs extends React.Component {
+            state = {
+                studys: ['vue', 'react', 'angular']
+            }
+            render() {
+                return (
+                    <div>
+                        {this.state.studys.map((item, index) => {
+                            return <li key={index}>{item}</li>
+                        })}
+                    </div>
+                )
+            }
+        }
+        // onClick={this.handleSubmit}
         ReactDOM.render(<Login />, document.querySelector('#text1'))
+        ReactDOM.render(<Imgs />, document.querySelector('#text2'))
     </script>
 </body>
 

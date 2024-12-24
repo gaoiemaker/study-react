@@ -24,7 +24,6 @@
                     isHot: true,
                 }
                 this.changeWeather = this.changeWeather.bind(this)
-
             }
             render() {
                 return <h1 onClick={this.changeWeather}>今天天气很{this.state.isHot? '炎热' : '凉爽'}</h1>

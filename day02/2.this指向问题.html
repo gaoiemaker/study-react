@@ -15,19 +15,19 @@
             constructor(name, age) {
                 this.name = name;
                 this.age = age;
-                
+                this.study = this.study.bind(this)
             }
             study() {
-                console.log(this);
+                this.name = 'hhh'
             }
         }
         const p1 = new Person('gs', 18)
-        var a = p1.study
-       function b() { 
-        console.log(this);
+        p1.study()
+        console.log(p1.name)
+        function b() {
+            console.log(this);
         }
         var c = b;
-        a()
     </script>
 </body>
 
