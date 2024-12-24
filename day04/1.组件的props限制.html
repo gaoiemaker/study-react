@@ -30,7 +30,10 @@
                     </ul>
                 )
             }
-
+            propTypes = {
+                name:PropTypes.string,
+                sex:PropTypes.number
+            }
         }
         
         ReactDOM.render(<MyComponent name='高尚' age='18' sex='男' />, document.getElementById('text1'))
